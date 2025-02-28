@@ -22,6 +22,14 @@ if(BUILD_CUDA)
     src/gpu_bbs3d_rviz2/gpu_ros2_test_rviz2.cpp
     src/gpu_bbs3d_rviz2/gpu_ros2_test_rviz2_node.cpp
   )
+  ament_target_dependencies(gpu_ros2_test_rviz2
+  rclcpp
+  sensor_msgs
+  geometry_msgs
+  tf2_ros
+  std_msgs
+  pcl_conversions
+  )
 
   target_include_directories(gpu_ros2_test_rviz2 
     PUBLIC ${PROJECT_SOURCE_DIR}/include
